@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Padel</title>
+<meta name="description" content="Neon Padel — jeu de padel solo pour iOS et Android. Pages légales et assistance.">
+<link rel="icon" href="icone.png">
+<link rel="stylesheet" href="style.css">
+<style>
+    .icone {
+        width: 96px; height: 96px; border-radius: 21%;
+        display: block; margin-bottom: 1.2rem;
+    }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="langues">
+    <button type="button" data-pour="fr" aria-pressed="true">FR</button>
+    <button type="button" data-pour="en" aria-pressed="false">EN</button>
+</div>
+
+<header>
+    <img class="icone" src="icone.png" alt="Neon Padel">
+    <h1>Neon Padel</h1>
+    <p class="date" data-langue="fr">Jeu de padel solo pour iOS et Android</p>
+    <p class="date" data-langue="en" hidden>Single-player padel game for iOS and Android</p>
+</header>
+
+<main data-langue="fr">
+    <p>Une carrière de quinze adversaires, un mode infini, et un seul geste à apprendre : le
+    balayage. Le jeu se joue hors ligne, sans compte et sans inscription.</p>
+
+    <h2>Pages légales</h2>
+    <ul class="liens">
+        <li><a href="confidentialite.html">
+            <span class="titre">Politique de confidentialité</span>
+            <span class="sous">Ce que le jeu collecte, ce qu'il ne collecte pas, et comment exercer vos droits</span>
+        </a></li>
+        <li><a href="conditions.html">
+            <span class="titre">Conditions d'utilisation</span>
+            <span class="sous">Licence, achats intégrés, remboursements, responsabilité</span>
+        </a></li>
+    </ul>
+
+    <h2>Assistance</h2>
+    <p>Un bug, un achat non livré, une question : écrivez à
+    <a href="mailto:moshab.tabti@codeit.be">moshab.tabti@codeit.be</a>. Indiquez le numéro de
+    version affiché en bas de l'écran des réglages du jeu, ainsi que votre modèle de téléphone —
+    c'est ce qui permet de reproduire le problème.</p>
+</main>
+
+<main data-langue="en" hidden>
+    <p>A career of fifteen opponents, an endless mode, and a single gesture to learn: the swipe. The
+    game runs offline, with no account and no sign-up.</p>
+
+    <h2>Legal</h2>
+    <ul class="liens">
+        <li><a href="confidentialite.html">
+            <span class="titre">Privacy Policy</span>
+            <span class="sous">What the game collects, what it does not, and how to exercise your rights</span>
+        </a></li>
+        <li><a href="conditions.html">
+            <span class="titre">Terms of Use</span>
+            <span class="sous">Licence, in-app purchases, refunds, liability</span>
+        </a></li>
+    </ul>
+
+    <h2>Support</h2>
+    <p>A bug, an undelivered purchase, a question: write to
+    <a href="mailto:moshab.tabti@codeit.be">moshab.tabti@codeit.be</a>. Include the version number
+    shown at the bottom of the game's settings screen and your phone model — that is what makes the
+    problem reproducible.</p>
+</main>
+
+<footer>
+    <p>CODE-IT SRL · BE 0695.587.493</p>
+</footer>
+
+</div>
+<script src="langue.js"></script>
+</body>
+</html>

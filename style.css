@@ -1,0 +1,190 @@
+/* Neon Padel — pages legales.
+   Palette reprise de UiTheme : fond 0A1420, surface 131E2C, bordure 24344A,
+   accent E8F04A, texte faible 7A8CA3. Aucune police distante, aucun script
+   tiers, aucun cookie : une page qui explique qu'on ne piste pas ne peut pas
+   charger une ressource externe pour le dire. */
+
+:root {
+    color-scheme: dark light;
+    --fond: #0A1420;
+    --surface: #131E2C;
+    --bordure: #24344A;
+    --accent: #E8F04A;
+    --texte: #FFFFFF;
+    --faible: #7A8CA3;
+    --largeur: 44rem;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --fond: #F4F6F8;
+        --surface: #FFFFFF;
+        --bordure: #D3DAE2;
+        --accent: #5A6300;
+        --texte: #10161F;
+        --faible: #55677D;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0 1.25rem 5rem;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+}
+
+.page { max-width: var(--largeur); margin: 0 auto; }
+
+/* En-tete */
+
+header {
+    padding: 3rem 0 1.5rem;
+    border-bottom: 2px solid var(--bordure);
+    margin-bottom: 2.5rem;
+}
+
+.marque {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(1.9rem, 6vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0.6rem 0 0.4rem;
+    letter-spacing: -0.01em;
+}
+
+.date { color: var(--faible); font-size: 0.95rem; margin: 0; }
+
+/* Selecteur de langue. Sans JavaScript les deux langues s'affichent l'une
+   apres l'autre — illisible n'est pas la meme chose que long, et une page
+   legale doit rester lisible quand le script ne s'execute pas. */
+
+.langues { float: right; margin-top: 3rem; }
+
+.langues button {
+    background: transparent;
+    border: 1.5px solid var(--bordure);
+    color: var(--faible);
+    font: inherit;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.langues button + button { margin-left: 0.3rem; }
+
+.langues button[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Corps */
+
+h2 {
+    font-size: 1.3rem;
+    margin: 3rem 0 0.9rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--bordure);
+    letter-spacing: -0.005em;
+}
+
+h2:first-of-type { border-top: none; padding-top: 0; }
+
+h3 { font-size: 1.05rem; margin: 1.8rem 0 0.5rem; }
+
+p, li { margin: 0.7rem 0; }
+
+ul { padding-left: 1.2rem; }
+
+li::marker { color: var(--accent); }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+strong { color: var(--texte); }
+
+code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.88em;
+    background: var(--surface);
+    border: 1px solid var(--bordure);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+}
+
+/* Encadre : ce qui doit etre lu meme en diagonale. */
+
+.encadre {
+    background: var(--surface);
+    border: 1px solid var(--bordure);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.encadre p:first-child { margin-top: 0; }
+.encadre p:last-child { margin-bottom: 0; }
+
+/* Tableaux — ils debordent sur telephone, donc ils defilent seuls. */
+
+.tableau { overflow-x: auto; margin: 1.2rem 0; }
+
+table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: 0.95rem; }
+
+th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--bordure);
+}
+
+th { color: var(--faible); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Pied */
+
+footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--bordure);
+    color: var(--faible);
+    font-size: 0.9rem;
+}
+
+footer a { color: var(--faible); }
+
+/* Index */
+
+.liens { list-style: none; padding: 0; }
+
+.liens li { margin: 0.9rem 0; }
+
+.liens a {
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    color: var(--texte);
+}
+
+.liens a:hover { border-color: var(--accent); }
+
+.liens .titre { display: block; font-weight: 700; color: var(--accent); }
+
+.liens .sous { display: block; color: var(--faible); font-size: 0.92rem; }
